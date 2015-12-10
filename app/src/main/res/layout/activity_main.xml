@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/fm_stadium"
+        class="com.touna.lovesportapp.fragment.StadiumFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"/>
+
+    <fragment
+        android:id="@+id/fm_coach"
+        class="com.touna.lovesportapp.fragment.CoachFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"/>
+
+    <fragment
+        android:id="@+id/fm_mine"
+        class="com.touna.lovesportapp.fragment.MineFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="56dp">
+
+        <View
+            android:id="@+id/v_line_top"
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/tab_normal"/>
+
+        <com.touna.lovesportapp.view.FragmentIndicator
+            android:id="@+id/fm_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:layout_below="@id/v_line_top"/>
+    </RelativeLayout>
+
+</LinearLayout>
