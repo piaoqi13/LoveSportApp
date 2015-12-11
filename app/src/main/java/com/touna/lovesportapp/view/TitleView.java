@@ -44,21 +44,21 @@ public class TitleView extends LinearLayout {
     }
 
     public void setLeftNavigationText(int id, OnClickListener listener) {
+        mTvLeftNavigation.setText(id);
         mLlLeftNavigation.setVisibility(View.VISIBLE);
         mLlLeftNavigation.setOnClickListener(listener);
-        mTvLeftNavigation.setText(id);
     }
 
     public void setLeftNavigationText(String str, OnClickListener listener) {
+        mTvLeftNavigation.setText(str);
         mLlLeftNavigation.setVisibility(View.VISIBLE);
         mLlLeftNavigation.setOnClickListener(listener);
-        mTvLeftNavigation.setText(str);
     }
 
     public void setLeftNavigationImg(int id, OnClickListener listener) {
-        mLlLeftNavigation.setVisibility(View.VISIBLE);
-        mLlLeftNavigation.setOnClickListener(listener);
         mIvLeftNavigation.setBackgroundResource(id);
+        mIvLeftNavigation.setVisibility(View.VISIBLE);
+        mLlLeftNavigation.setOnClickListener(listener);
     }
 
     public void setTitle(int id) {
@@ -70,20 +70,20 @@ public class TitleView extends LinearLayout {
     }
 
     public void setRightNavigationText(int id, OnClickListener listener) {
+        mTvRightNavigation.setText(id);
         mLlRightNavigation.setVisibility(View.VISIBLE);
         mLlRightNavigation.setOnClickListener(listener);
-        mTvRightNavigation.setText(id);
     }
 
     public void setRightNavigationText(String str, OnClickListener listener) {
+        mTvRightNavigation.setText(str);
         mLlRightNavigation.setVisibility(View.VISIBLE);
         mLlRightNavigation.setOnClickListener(listener);
-        mTvRightNavigation.setText(str);
     }
 
     public void setRightNavigationImg(int id, OnClickListener listener) {
-        mLlLeftNavigation.setVisibility(View.VISIBLE);
-        mLlLeftNavigation.setOnClickListener(listener);
         mIvRightNavigation.setBackgroundResource(id);
+        mIvRightNavigation.setVisibility(View.VISIBLE);
+        mLlLeftNavigation.setOnClickListener(listener);
     }
 }

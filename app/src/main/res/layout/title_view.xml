@@ -11,6 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="fill_parent"
         android:layout_weight="1"
+        android:background="@drawable/ll_navigation_selector"
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingLeft="14dp"
@@ -41,13 +42,14 @@
         android:gravity="center"
         android:text="TitleName"
         android:textColor="@color/tab_normal"
-        android:textSize="14sp"/>
+        android:textSize="18sp"/>
 
     <LinearLayout
         android:id="@+id/ll_right_navigation"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
         android:layout_weight="1"
+        android:background="@drawable/ll_navigation_selector"
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingLeft="14dp"

@@ -9,4 +9,8 @@
     <color name="tab_pressed">#ff5a1e</color>
     <color name="title_background">#f7f7f7</color>
     <color name="content_background">#eeeeee</color>
+    <color name="hint_text">#dcdcdc</color>
+    <color name="btn_normal">#ff5a1e</color>
+    <color name="btn_pressed">#b94116</color>
+    <color name="navigation_pressed">#bebebe</color>
 </resources>
