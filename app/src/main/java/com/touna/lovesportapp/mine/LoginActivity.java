@@ -1,5 +1,6 @@
 package com.touna.lovesportapp.mine;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -61,7 +62,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 Log.i("CollinWang", "ll_left_navigation is run");
                 break;
             case R.id.ll_right_navigation:
-                Log.i("CollinWang", "ll_right_navigation is run");
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
                 break;
         }
     }

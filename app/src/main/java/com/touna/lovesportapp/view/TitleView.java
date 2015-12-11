@@ -38,7 +38,7 @@ public class TitleView extends LinearLayout {
         mIvLeftNavigation = (ImageView) findViewById(R.id.iv_left_navigation_img);
         mIvRightNavigation = (ImageView) findViewById(R.id.iv_right_navigation_img);
         mTvLeftNavigation = (TextView) findViewById(R.id.tv_left_navigation_text);
-        mTvRightNavigation = (TextView) findViewById(R.id.tv_left_navigation_text);
+        mTvRightNavigation = (TextView) findViewById(R.id.tv_right_navigation_text);
 
         mTvTitle = (TextView) findViewById(R.id.tv_title);
     }
@@ -71,13 +71,13 @@ public class TitleView extends LinearLayout {
 
     public void setRightNavigationText(int id, OnClickListener listener) {
         mTvRightNavigation.setText(id);
-        mLlRightNavigation.setVisibility(View.VISIBLE);
+        mTvRightNavigation.setVisibility(View.VISIBLE);
         mLlRightNavigation.setOnClickListener(listener);
     }
 
     public void setRightNavigationText(String str, OnClickListener listener) {
         mTvRightNavigation.setText(str);
-        mLlRightNavigation.setVisibility(View.VISIBLE);
+        mTvRightNavigation.setVisibility(View.VISIBLE);
         mLlRightNavigation.setOnClickListener(listener);
     }
 

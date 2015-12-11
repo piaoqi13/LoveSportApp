@@ -52,8 +52,8 @@
         android:background="@drawable/ll_navigation_selector"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingLeft="14dp"
-        android:paddingRight="14dp">
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
 
         <ImageView
             android:id="@+id/iv_right_navigation_img"
