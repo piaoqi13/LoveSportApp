@@ -12,4 +12,9 @@
     <string name="hint_login_username">手机号/用户名</string>
     <string name="forget_password">忘记密码</string>
     <string name="other_app_account_login">第三方帐号快速登录</string>
+
+    <string name="index_default_city">大连</string>
+    <string name="stadium_fitness_text">健身馆</string>
+    <string name="stadium_badminton_text">羽毛球馆</string>
+    <string name="stadium_swim_text">游泳馆</string>
 </resources>

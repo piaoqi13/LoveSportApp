@@ -20,6 +20,8 @@ public class TitleView extends LinearLayout {
     private ImageView mIvLeftNavigation = null;
     private ImageView mIvRightNavigation = null;
 
+    private ImageView mIvCenterSearch = null;
+
     private TextView mTvLeftNavigation = null;
     private TextView mTvRightNavigation = null;
 
@@ -37,6 +39,7 @@ public class TitleView extends LinearLayout {
         mLlRightNavigation = (LinearLayout) findViewById(R.id.ll_right_navigation);
         mIvLeftNavigation = (ImageView) findViewById(R.id.iv_left_navigation_img);
         mIvRightNavigation = (ImageView) findViewById(R.id.iv_right_navigation_img);
+        mIvCenterSearch = (ImageView) findViewById(R.id.iv_center_search_img);
         mTvLeftNavigation = (TextView) findViewById(R.id.tv_left_navigation_text);
         mTvRightNavigation = (TextView) findViewById(R.id.tv_right_navigation_text);
 
@@ -45,13 +48,13 @@ public class TitleView extends LinearLayout {
 
     public void setLeftNavigationText(int id, OnClickListener listener) {
         mTvLeftNavigation.setText(id);
-        mLlLeftNavigation.setVisibility(View.VISIBLE);
+        mTvLeftNavigation.setVisibility(View.VISIBLE);
         mLlLeftNavigation.setOnClickListener(listener);
     }
 
     public void setLeftNavigationText(String str, OnClickListener listener) {
         mTvLeftNavigation.setText(str);
-        mLlLeftNavigation.setVisibility(View.VISIBLE);
+        mTvLeftNavigation.setVisibility(View.VISIBLE);
         mLlLeftNavigation.setOnClickListener(listener);
     }
 
@@ -63,10 +66,17 @@ public class TitleView extends LinearLayout {
 
     public void setTitle(int id) {
         mTvTitle.setText(id);
+        mTvTitle.setVisibility(View.VISIBLE);
     }
 
     public void setTitle(String str) {
         mTvTitle.setText(str);
+        mTvTitle.setVisibility(View.VISIBLE);
+    }
+
+    public void setTitleSearch(OnClickListener listener) {
+        mIvCenterSearch.setVisibility(View.VISIBLE);
+        mIvCenterSearch.setOnClickListener(listener);
     }
 
     public void setRightNavigationText(int id, OnClickListener listener) {
@@ -84,6 +94,6 @@ public class TitleView extends LinearLayout {
     public void setRightNavigationImg(int id, OnClickListener listener) {
         mIvRightNavigation.setBackgroundResource(id);
         mIvRightNavigation.setVisibility(View.VISIBLE);
-        mLlLeftNavigation.setOnClickListener(listener);
+        mLlRightNavigation.setOnClickListener(listener);
     }
 }

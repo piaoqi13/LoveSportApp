@@ -13,4 +13,5 @@
     <color name="btn_normal">#ff5a1e</color>
     <color name="btn_pressed">#b94116</color>
     <color name="navigation_pressed">#bebebe</color>
+    <color name="index_recommend_view">#979797</color>
 </resources>
