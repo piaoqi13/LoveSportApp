@@ -23,7 +23,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="@drawable/edt_shape_background"
-            android:hint="手机号/用户名"
+            android:hint="@string/hint_login_username"
             android:paddingBottom="10dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
@@ -39,7 +39,7 @@
             android:layout_height="fill_parent"
             android:layout_marginTop="15dp"
             android:background="@drawable/edt_shape_background"
-            android:hint="密码"
+            android:hint="@string/hint_login_password"
             android:paddingBottom="10dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
@@ -55,7 +55,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:gravity="right"
-            android:text="忘记密码"
+            android:text="@string/forget_password"
             android:textColor="@color/tab_normal"
             android:textSize="15sp"/>
 
@@ -64,9 +64,68 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_click_selector"
-            android:text="登录"
+            android:text="@string/title_login"
             android:textColor="@color/white"
             android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/hint_text"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/other_app_account_login"
+            android:textColor="@color/tab_normal"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/hint_text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="55dp"
+        android:paddingRight="55dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/qq_logo_normal"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/weixin_logo_normal"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/xinlang_logo_normal"/>
     </LinearLayout>
 
 </LinearLayout>
