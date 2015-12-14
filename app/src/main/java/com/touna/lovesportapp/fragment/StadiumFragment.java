@@ -66,6 +66,10 @@ public class StadiumFragment extends BaseFragment implements View.OnClickListene
         mLvBadminton = new ListView(mContext);
         mLvSwim = new ListView(mContext);
 
+        mLvFitness.setBackgroundColor(getResources().getColor(R.color.white));
+        mLvBadminton.setBackgroundColor(getResources().getColor(R.color.white));
+        mLvSwim.setBackgroundColor(getResources().getColor(R.color.white));
+
         mListViews = new ArrayList<View>();
         mListViews.add(mLvFitness);
         mListViews.add(mLvBadminton);
