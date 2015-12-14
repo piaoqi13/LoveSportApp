@@ -1,5 +1,6 @@
 package com.touna.lovesportapp;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,9 +14,12 @@ import org.xutils.x;
  */
 public class BaseFragment extends Fragment {
     private boolean injected = false;
+    protected Activity mContext = null;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        mContext = getActivity();
         injected = true;
         return x.view().inject(this, inflater, container);
     }

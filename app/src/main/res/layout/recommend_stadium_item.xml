@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:paddingBottom="15dp"
+              android:paddingLeft="14dp"
+              android:paddingRight="14dp"
+              android:paddingTop="15dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="1dp">
+
+        <ImageView
+            android:id="@+id/iv_recommend_stadium_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/recommend_stadium_logo"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_recommend_stadium_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大连腾飞软件园羽毛球馆"
+            android:textColor="@color/tab_normal"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_recommend_stadium_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/location_logo"
+            android:drawablePadding="5dp"
+            android:text="高新园区"
+            android:textColor="@color/recommend_stadium_location"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_recommend_stadium_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥50元"
+                android:textColor="@color/tab_pressed"
+                android:textSize="11sp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_recommend_stadium_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_click_selector"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="预定"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
