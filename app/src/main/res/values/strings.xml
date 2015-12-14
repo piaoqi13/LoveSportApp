@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LoveSportApp</string>
+    <string name="app_name">爱运动</string>
     <string name="action_settings">Settings</string>
 
     <string name="tab_stadium">场馆</string>
@@ -17,4 +17,9 @@
     <string name="stadium_fitness_text">健身馆</string>
     <string name="stadium_badminton_text">羽毛球馆</string>
     <string name="stadium_swim_text">游泳馆</string>
+
+    <string name="mine_my_order">我的订单</string>
+    <string name="mine_my_collect">我的收藏</string>
+    <string name="mine_feedback">意见反馈</string>
+    <string name="mine_settings">设置</string>
 </resources>

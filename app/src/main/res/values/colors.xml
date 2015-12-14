@@ -15,4 +15,5 @@
     <color name="navigation_pressed">#bebebe</color>
     <color name="index_recommend_view">#979797</color>
     <color name="recommend_stadium_location">#969696</color>
+    <color name="ll_click_pressed">#ebebeb</color>
 </resources>
