@@ -50,12 +50,14 @@ public class RecommendStadiumAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder holder = null;
+        RecommendStadiumInfo stadiumInfo = mStadiums.get(i);
         if (view == null) {
             view = mInflater.inflate(R.layout.recommend_stadium_item, null);
-            holder = new ViewHolder(view, mStadiums.get(i));
+            holder = new ViewHolder(view, stadiumInfo);
             view.setTag(holder);
         } else {
             holder = (ViewHolder) view.getTag();
+            holder.update(stadiumInfo);
         }
 
         return view;
@@ -66,6 +68,11 @@ public class RecommendStadiumAdapter extends BaseAdapter {
 
         public ViewHolder(View view, RecommendStadiumInfo stadium) {
             x.view().inject(this, view);
+            mStadium = stadium;
+            setData();
+        }
+
+        private void update(RecommendStadiumInfo stadium) {
             mStadium = stadium;
             setData();
         }

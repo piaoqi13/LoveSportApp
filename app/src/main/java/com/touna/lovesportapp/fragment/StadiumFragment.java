@@ -81,7 +81,11 @@ public class StadiumFragment extends BaseFragment implements View.OnClickListene
         mStadiums.add(new RecommendStadiumInfo("url", "大连数码广场羽毛球馆", "甘井子区", "￥50元"));
         mStadiums.add(new RecommendStadiumInfo("url", "大连青泥洼桥羽毛球馆", "中山区", "￥50元"));
         mStadiums.add(new RecommendStadiumInfo("url", "大连东软信息学院羽毛球馆", "甘井子区", "￥50元"));
-        mStadiums.add(new RecommendStadiumInfo("url", "大连创业大厦羽毛球馆", "高新园区", "￥50元"));
+        mStadiums.add(new RecommendStadiumInfo("url", "大连理工大学毛球馆", "甘井子区", "￥50元"));
+        mStadiums.add(new RecommendStadiumInfo("url", "大连外国语学院羽毛球馆", "旅顺区", "￥50元"));
+        mStadiums.add(new RecommendStadiumInfo("url", "大连交通大学羽毛球馆", "沙河口区", "￥50元"));
+        mStadiums.add(new RecommendStadiumInfo("url", "大连医科大学羽毛球馆", "旅顺区", "￥50元"));
+        mStadiums.add(new RecommendStadiumInfo("url", "大连海事大学羽毛球馆", "甘井子区", "￥50元"));
 
         mLvFitness.setAdapter(new RecommendStadiumAdapter(mContext, mStadiums));
 
@@ -92,6 +96,7 @@ public class StadiumFragment extends BaseFragment implements View.OnClickListene
 
     @Event(R.id.ll_stadium_fitness)
     private void showFitnessEvent(View view) {
+        mVpRecommendStadium.setCurrentItem(0);
         mVStadiumFitnessLine.setBackgroundColor(getResources().getColor(R.color.tab_pressed));
         mVStadiumBadmintonLine.setBackgroundColor(getResources().getColor(R.color.index_recommend_view));
         mVStadiumSwimLine.setBackgroundColor(getResources().getColor(R.color.index_recommend_view));
@@ -99,6 +104,7 @@ public class StadiumFragment extends BaseFragment implements View.OnClickListene
 
     @Event(R.id.ll_stadium_badminton)
     private void showBadmintonEvent(View view) {
+        mVpRecommendStadium.setCurrentItem(1);
         mVStadiumFitnessLine.setBackgroundColor(getResources().getColor(R.color.index_recommend_view));
         mVStadiumBadmintonLine.setBackgroundColor(getResources().getColor(R.color.tab_pressed));
         mVStadiumSwimLine.setBackgroundColor(getResources().getColor(R.color.index_recommend_view));
@@ -106,6 +112,7 @@ public class StadiumFragment extends BaseFragment implements View.OnClickListene
 
     @Event(R.id.ll_stadium_swim)
     private void showSwimEvent(View view) {
+        mVpRecommendStadium.setCurrentItem(2);
         mVStadiumFitnessLine.setBackgroundColor(getResources().getColor(R.color.index_recommend_view));
         mVStadiumBadmintonLine.setBackgroundColor(getResources().getColor(R.color.index_recommend_view));
         mVStadiumSwimLine.setBackgroundColor(getResources().getColor(R.color.tab_pressed));

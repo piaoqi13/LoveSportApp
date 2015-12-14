@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
     <color name="tab_normal">#363b3f</color>
     <color name="tab_pressed">#ff5a1e</color>
     <color name="title_background">#f7f7f7</color>
@@ -15,5 +16,5 @@
     <color name="navigation_pressed">#bebebe</color>
     <color name="index_recommend_view">#979797</color>
     <color name="recommend_stadium_location">#969696</color>
-    <color name="ll_click_pressed">#ebebeb</color>
+    <color name="ll_click_pressed">#f4f4f4</color>
 </resources>
