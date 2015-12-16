@@ -17,4 +17,8 @@
     <color name="index_recommend_view">#979797</color>
     <color name="recommend_stadium_location">#969696</color>
     <color name="ll_click_pressed">#f4f4f4</color>
+
+    <color name="pull_refresh_textview">#000000</color>
+    <color name="gold">#000000</color>
+    <color name="transparent">#00000000</color>
 </resources>
