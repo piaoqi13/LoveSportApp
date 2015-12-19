@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.touna.lovesportapp.BaseFragment;
 import com.touna.lovesportapp.R;
 import com.touna.lovesportapp.mine.LoginActivity;
+import com.umeng.analytics.MobclickAgent;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
@@ -20,6 +21,8 @@ import org.xutils.view.annotation.ViewInject;
  */
 @ContentView(R.layout.fragment_mine)
 public class MineFragment extends BaseFragment {
+    private final String mPageName = "MineFragment";
+
     @ViewInject(R.id.ll_mine_my_order)
     private LinearLayout mLlMyOrder;
 
@@ -72,5 +75,17 @@ public class MineFragment extends BaseFragment {
     private void clickLoginEvent(View view) {
         Intent intent = new Intent(mContext, LoginActivity.class);
         mContext.startActivity(intent);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onPageStart(mPageName);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPageEnd(mPageName);
     }
 }

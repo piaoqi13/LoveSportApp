@@ -10,6 +10,7 @@ import com.touna.lovesportapp.BaseActivity;
 import com.touna.lovesportapp.R;
 import com.touna.lovesportapp.view.ClearEditText;
 import com.touna.lovesportapp.view.TitleView;
+import com.umeng.analytics.MobclickAgent;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
@@ -21,6 +22,8 @@ import org.xutils.view.annotation.ViewInject;
 
 @ContentView(R.layout.activity_register)
 public class RegisterActivity extends BaseActivity implements View.OnClickListener {
+    private final String mPageName = "RegisterActivity";
+
     @ViewInject(R.id.tv_common_title)
     private TitleView mTitleView;
 
@@ -55,6 +58,20 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     @Event(R.id.btn_register)
     private void registerEvent(View view) {
         Log.i("CollinWang", "registerEvent is run");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MobclickAgent.onPageStart(mPageName);
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPageEnd(mPageName);
+        MobclickAgent.onPause(this);
     }
 
     @Override

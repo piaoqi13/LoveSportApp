@@ -9,6 +9,7 @@ import com.touna.lovesportapp.coach.CoachListAdapter;
 import com.touna.lovesportapp.model.CoachInfo;
 import com.touna.lovesportapp.view.PullPushXListView;
 import com.touna.lovesportapp.view.TitleView;
+import com.umeng.analytics.MobclickAgent;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
@@ -21,6 +22,8 @@ import java.util.List;
  */
 @ContentView(R.layout.fragment_coach)
 public class CoachFragment extends BaseFragment implements View.OnClickListener,PullPushXListView.OnRefreshListener, PullPushXListView.OnLoadMoreListener {
+    private final String mPageName = "CoachFragment";
+
     @ViewInject(R.id.tv_common_title)
     private TitleView mTitleView;
 
@@ -48,6 +51,18 @@ public class CoachFragment extends BaseFragment implements View.OnClickListener,
         mPullPushXListView.setOnRefreshListener(this);
         mPullPushXListView.setOnLoadListener(this);
         mPullPushXListView.setAdapter(new CoachListAdapter(mContext, mCoachs));
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onPageStart(mPageName);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPageEnd(mPageName);
     }
 
     @Override

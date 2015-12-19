@@ -11,6 +11,7 @@ import com.touna.lovesportapp.BaseActivity;
 import com.touna.lovesportapp.R;
 import com.touna.lovesportapp.view.ClearEditText;
 import com.touna.lovesportapp.view.TitleView;
+import com.umeng.analytics.MobclickAgent;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
@@ -21,6 +22,8 @@ import org.xutils.view.annotation.ViewInject;
  */
 @ContentView(R.layout.activity_login)
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
+    private final String mPageName = "LoginActivity";
+
     @ViewInject(R.id.tv_common_title)
     private TitleView mTitleView;
 
@@ -53,6 +56,20 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     @Event(R.id.btn_login)
     private void loginEvent(View view) {
         Log.i("CollinWang", "loginEvent is run");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MobclickAgent.onPageStart(mPageName);
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPageEnd(mPageName);
+        MobclickAgent.onPause(this);
     }
 
     @Override

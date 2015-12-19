@@ -12,6 +12,8 @@ import com.touna.lovesportapp.event.ResultEvent;
 import com.touna.lovesportapp.http.NetWorkUtils;
 import com.touna.lovesportapp.http.RequestListener;
 import com.touna.lovesportapp.view.FragmentIndicator;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.update.UmengUpdateAgent;
 
 /**
  * created by collin on 2015-12-07.
@@ -27,6 +29,7 @@ public class MainActivity extends FragmentActivity implements RequestListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        UmengUpdateAgent.update(this);
         initView();
         initData();
     }
@@ -88,5 +91,17 @@ public class MainActivity extends FragmentActivity implements RequestListener {
             finish();
         }
         return true;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

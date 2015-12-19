@@ -13,6 +13,7 @@ import com.touna.lovesportapp.model.RecommendStadiumInfo;
 import com.touna.lovesportapp.stadium.RecommendStadiumAdapter;
 import com.touna.lovesportapp.stadium.ViewPagerAdapter;
 import com.touna.lovesportapp.view.TitleView;
+import com.umeng.analytics.MobclickAgent;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
@@ -26,6 +27,8 @@ import java.util.List;
  */
 @ContentView(R.layout.fragment_stadium)
 public class StadiumFragment extends BaseFragment implements View.OnClickListener, ViewPager.OnPageChangeListener {
+    private final String mPageName = "StadiumFragment";
+
     @ViewInject(R.id.tv_common_title)
     private TitleView mTitleView;
 
@@ -146,6 +149,18 @@ public class StadiumFragment extends BaseFragment implements View.OnClickListene
     @Override
     public void onPageScrollStateChanged(int state) {
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onPageStart(mPageName);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPageEnd(mPageName);
     }
 
     @Override
