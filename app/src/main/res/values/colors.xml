@@ -21,4 +21,5 @@
     <color name="pull_refresh_textview">#000000</color>
     <color name="gold">#000000</color>
     <color name="transparent">#00000000</color>
+    <color name="half_transparent">#50000000</color>
 </resources>
