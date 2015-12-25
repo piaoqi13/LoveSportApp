@@ -63,7 +63,7 @@
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_click_selector"
+            android:background="@drawable/btn_clicked_selector"
             android:text="@string/title_login"
             android:textColor="@color/white"
             android:textSize="18sp"/>

@@ -73,7 +73,7 @@
                 android:id="@+id/tv_recommend_stadium_book"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_click_selector"
+                android:background="@drawable/btn_clicked_selector"
                 android:gravity="center"
                 android:paddingBottom="5dp"
                 android:paddingLeft="15dp"
