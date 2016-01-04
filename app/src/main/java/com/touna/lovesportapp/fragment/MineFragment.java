@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.touna.lovesportapp.BaseFragment;
 import com.touna.lovesportapp.R;
 import com.touna.lovesportapp.mine.LoginActivity;
+import com.touna.lovesportapp.mine.MyOrderActivity;
 import com.umeng.analytics.MobclickAgent;
 
 import org.xutils.view.annotation.ContentView;
@@ -49,6 +50,8 @@ public class MineFragment extends BaseFragment {
     @Event(R.id.ll_mine_my_order)
     private void clickMyOrderEvent(View view) {
         Log.i("CollinWang", "clickMyOrderEvent is run");
+        Intent intent = new Intent(mContext, MyOrderActivity.class);
+        startActivity(intent);
     }
 
     @Event(R.id.ll_mine_my_collect)
